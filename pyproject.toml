@@ -5,6 +5,7 @@ requires-python = ">=3.13"
 dependencies = [
     "adjusttext>=1.4.0",
     "ipykernel>=7.4.0",
+    "jupyterlab>=4.6.5",
     "matplotlib>=3.11.2",
     "nbconvert>=7.17.2",
     "nbformat>=5.11.1",
