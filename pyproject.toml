@@ -1,0 +1,17 @@
+[project]
+name = "nasipadang"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "adjusttext>=1.4.0",
+    "ipykernel>=7.4.0",
+    "matplotlib>=3.11.2",
+    "nbconvert>=7.17.2",
+    "nbformat>=5.11.1",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "torch>=2.15.0",
+    "xlrd>=2.0.2",
+]
