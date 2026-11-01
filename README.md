@@ -11,9 +11,9 @@ climate projections for 2045-2065. It is bundled at `data/climate_change.xls`. N
    against mean filling, KNN and an iterative MLP. Blanks that mean "no" or "about 100%" are filled by rule first.
 2. **Feature engineering** - demand, rice and beef supply, climate and policy (including beef-tax risk and a
    rendang advantage index), and kitchen and operations.
-3. **Clustering** - K-means groups countries into five market types (selected over Gaussian mixtures by a fixed
-   stability and separation rule).
-4. **Ranking** - a transparent score, checked against 5,000 random weightings.
+3. **Clustering** - K-means (k from the elbow method), a Gaussian mixture (k from BIC) and HDBSCAN are compared on coverage,
+   sizes and stability, with silhouette reported. A Gaussian mixture groups countries into six market types.
+4. **Ranking** - a transparent score, checked against 5,000 random weightings. The clusters label countries but do not affect the score.
 
 ## How to run
 
@@ -37,7 +37,7 @@ climate projections for 2045-2065. It is bundled at `data/climate_change.xls`. N
    ```
 
 Run it from inside the `nasipadang` folder: the dataset is loaded from `data/climate_change.xls` relative to it.
-A full run takes about 3 minutes and regenerates `figures/` and `nasipadang_ranking.csv`.
+A full run takes about 2-3 minutes on a typical multi-core laptop and regenerates `figures/` and `nasipadang_ranking.csv`.
 
 ## Contents
 
@@ -46,5 +46,5 @@ A full run takes about 3 minutes and regenerates `figures/` and `nasipadang_rank
 | `nasipadang.ipynb` | The full analysis, with outputs |
 | `data/climate_change.xls` | The World Bank climate change dataset |
 | `figures/` | Slide-ready figures, numbered in presentation order |
-| `nasipadang_ranking.csv` | Final table: rank, score, cluster, group scores and every feature for 156 countries |
+| `nasipadang_ranking.csv` | Final table: rank, score, market type, group scores and every feature for 156 countries |
 | `pyproject.toml`, `uv.lock` | Pinned dependencies for `uv` |
