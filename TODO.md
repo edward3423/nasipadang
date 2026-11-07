@@ -14,7 +14,7 @@
 4. **Justify the SVR choice.** Explain why SVR was picked over other forecasting
    techniques.
 
-5. **No free lunch - SVR comparison.** Benchmark SVR against other regression
+5. (Done) **No free lunch - SVR comparison.** Benchmark SVR against other regression
    algorithms, not just against the baseline.
 
 6. **No free lunch - GMM comparison.** Benchmark the Gaussian mixture against
