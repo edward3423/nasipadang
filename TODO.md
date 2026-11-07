@@ -1,10 +1,10 @@
 # TODO
 
-1. **Justify the autoencoder choice.** Look through past Claude Code sessions and
+1. (Done) **Justify the autoencoder choice.** Look through past Claude Code sessions and
    write up why the denoising autoencoder was chosen over other imputation
    techniques (mean/median, kNN, MICE, matrix factorisation).
 
-2. **Make the missing-data chart readable.** The table-style gap/coverage chart is
+2. (Done) **Make the missing-data chart readable.** The table-style gap/coverage chart is
    extremely hard to understand at a glance - redesign it so the message lands
    quickly.
 
